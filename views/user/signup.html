@@ -1,0 +1,607 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Create Account | Phoenix</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/sweetalert2@11.0.19/dist/sweetalert2.min.css"
+    />
+    <style>
+      .phoenix-gradient {
+        background: linear-gradient(to right, #dc2626, #b91c1c);
+      }
+      .phoenix-shadow {
+        box-shadow: 0 4px 14px rgba(220, 38, 38, 0.25);
+      }
+      .form-input:focus {
+        border-color: #dc2626;
+        box-shadow: 0 0 0 1px rgba(220, 38, 38, 0.2);
+      }
+      .checkbox:checked {
+        background-color: #dc2626;
+        border-color: #dc2626;
+      }
+    </style>
+  </head>
+  <body class="bg-gray-50">
+    <div class="min-h-screen flex flex-col md:flex-row">
+      <!-- Auth sidebar -->
+      <div
+        class="bg-gradient-to-b from-red-600 to-red-800 md:w-1/3 lg:w-1/4 p-8 flex flex-col justify-between text-white"
+      >
+        <div>
+          <h1 class="text-2xl font-bold mb-2">Phoenix</h1>
+          <p class="text-red-200">Premium audio experience</p>
+        </div>
+        <div class="hidden md:block">
+          <h2 class="text-xl font-semibold mb-2">
+            Discover the world of sound
+          </h2>
+          <p class="text-red-200">
+            Join thousands of listeners enjoying premium audio quality.
+          </p>
+        </div>
+      </div>
+
+      <!-- Main content -->
+      <div class="flex-1 flex items-center justify-center p-6">
+        <div class="w-full max-w-md">
+          <div class="text-center mb-8">
+            <h1 class="text-2xl font-bold text-gray-800">Create Account</h1>
+            <p class="text-gray-600">Join Phoenix and discover premium audio</p>
+          </div>
+
+          <form id="signup-form" class="space-y-6">
+            <!-- Name Field -->
+            <div class="space-y-2">
+              <label for="name" class="block text-gray-700 font-medium"
+                >Full Name</label
+              >
+              <div class="relative">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  class="absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-400 w-4 h-4"
+                  width="24"
+                  height="24"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                >
+                  <circle cx="12" cy="8" r="5" />
+                  <path d="M20 21a8 8 0 0 0-16 0" />
+                </svg>
+                <input
+                  id="name"
+                  type="text"
+                  placeholder="Enter your full name"
+                  class="w-full pl-10 pr-3 py-2 border border-gray-300 rounded-md focus:outline-none form-input"
+                />
+              </div>
+              <p id="name-error" class="text-red-600 text-sm hidden"></p>
+            </div>
+
+            <!-- Email Field -->
+            <div class="space-y-2">
+              <label for="email" class="block text-gray-700 font-medium"
+                >Email Address</label
+              >
+              <div class="relative">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  class="absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-400 w-4 h-4"
+                  width="24"
+                  height="24"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                >
+                  <rect width="20" height="16" x="2" y="4" rx="2" />
+                  <path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7" />
+                </svg>
+                <input
+                  id="email"
+                  type="email"
+                  placeholder="Enter your email"
+                  class="w-full pl-10 pr-3 py-2 border border-gray-300 rounded-md focus:outline-none form-input"
+                />
+              </div>
+              <p id="email-error" class="text-red-600 text-sm hidden"></p>
+            </div>
+
+            <!-- Phone Number Field -->
+            <div class="space-y-2">
+              <label for="phone" class="block text-gray-700 font-medium"
+                >Phone Number</label
+              >
+              <div class="relative">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  class="absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-400 w-4 h-4"
+                  width="24"
+                  height="24"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                >
+                  <path
+                    d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"
+                  />
+                </svg>
+                <input
+                  id="phone"
+                  type="tel"
+                  placeholder="Enter your phone number"
+                  class="w-full pl-10 pr-3 py-2 border border-gray-300 rounded-md focus:outline-none form-input"
+                />
+              </div>
+              <p id="phone-error" class="text-red-600 text-sm hidden"></p>
+            </div>
+
+            <!-- Password Field -->
+            <div class="space-y-2">
+              <label for="password" class="block text-gray-700 font-medium"
+                >Password</label
+              >
+              <div class="relative">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  class="absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-400 w-4 h-4"
+                  width="24"
+                  height="24"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                >
+                  <rect width="18" height="11" x="3" y="11" rx="2" ry="2" />
+                  <path d="M7 11V7a5 5 0 0 1 10 0v4" />
+                </svg>
+                <input
+                  id="password"
+                  type="password"
+                  placeholder="Create a strong password"
+                  class="w-full pl-10 pr-10 py-2 border border-gray-300 rounded-md focus:outline-none form-input"
+                />
+                <button
+                  type="button"
+                  id="toggle-password"
+                  class="absolute right-3 top-1/2 transform -translate-y-1/2 text-gray-400 hover:text-gray-600"
+                >
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    class="w-4 h-4"
+                    width="24"
+                    height="24"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="2"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  >
+                    <path d="M9.88 9.88a3 3 0 1 0 4.24 4.24" />
+                    <path
+                      d="M10.73 5.08A10.43 10.43 0 0 1 12 5c7 0 10 7 10 7a13.16 13.16 0 0 1-1.67 2.68"
+                    />
+                    <path
+                      d="M6.61 6.61A13.526 13.526 0 0 0 2 12s3 7 10 7a9.74 9.74 0 0 0 5.39-1.61"
+                    />
+                    <line x1="2" x2="22" y1="2" y2="22" />
+                  </svg>
+                </button>
+              </div>
+              <p id="password-error" class="text-red-600 text-sm hidden"></p>
+            </div>
+
+            <!-- Confirm Password Field -->
+            <div class="space-y-2">
+              <label
+                for="confirmPassword"
+                class="block text-gray-700 font-medium"
+                >Confirm Password</label
+              >
+              <div class="relative">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  class="absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-400 w-4 h-4"
+                  width="24"
+                  height="24"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                >
+                  <rect width="18" height="11" x="3" y="11" rx="2" ry="2" />
+                  <path d="M7 11V7a5 5 0 0 1 10 0v4" />
+                </svg>
+                <input
+                  id="confirmPassword"
+                  type="password"
+                  placeholder="Confirm your password"
+                  class="w-full pl-10 pr-10 py-2 border border-gray-300 rounded-md focus:outline-none form-input"
+                />
+                <button
+                  type="button"
+                  id="toggle-confirm-password"
+                  class="absolute right-3 top-1/2 transform -translate-y-1/2 text-gray-400 hover:text-gray-600"
+                >
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    class="w-4 h-4"
+                    width="24"
+                    height="24"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="2"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  >
+                    <path d="M9.88 9.88a3 3 0 1 0 4.24 4.24" />
+                    <path
+                      d="M10.73 5.08A10.43 10.43 0 0 1 12 5c7 0 10 7 10 7a13.16 13.16 0 0 1-1.67 2.68"
+                    />
+                    <path
+                      d="M6.61 6.61A13.526 13.526 0 0 0 2 12s3 7 10 7a9.74 9.74 0 0 0 5.39-1.61"
+                    />
+                    <line x1="2" x2="22" y1="2" y2="22" />
+                  </svg>
+                </button>
+              </div>
+              <p
+                id="confirmPassword-error"
+                class="text-red-600 text-sm hidden"
+              ></p>
+            </div>
+
+            <!-- Terms Agreement -->
+            <div class="space-y-2">
+              <div class="flex items-start space-x-2">
+                <input
+                  type="checkbox"
+                  id="terms"
+                  class="h-4 w-4 rounded border-gray-300 text-red-600 focus:ring-red-500 checkbox"
+                />
+                <label
+                  for="terms"
+                  class="text-sm text-gray-600 leading-relaxed"
+                >
+                  I agree to the
+                  <a
+                    href="/terms"
+                    class="text-red-600 hover:text-red-700 underline"
+                    >Terms of Service</a
+                  >
+                  and
+                  <a
+                    href="/privacy"
+                    class="text-red-600 hover:text-red-700 underline"
+                    >Privacy Policy</a
+                  >
+                </label>
+              </div>
+              <p id="terms-error" class="text-red-600 text-sm hidden"></p>
+            </div>
+
+            <!-- Submit Button -->
+            <button
+              type="submit"
+              id="submit-button"
+              class="w-full phoenix-gradient hover:opacity-90 text-white font-medium py-3 rounded-md phoenix-shadow"
+            >
+              Create Account
+            </button>
+
+            <!-- Divider -->
+            <div class="relative">
+              <div class="absolute inset-0 flex items-center">
+                <span class="w-full border-t border-gray-300"></span>
+              </div>
+              <div class="relative flex justify-center text-xs uppercase">
+                <span class="bg-white px-2 text-gray-500"
+                  >Or continue with</span
+                >
+              </div>
+            </div>
+
+            <!-- Google Signup -->
+            <button
+              type="button"
+              id="google-signup"
+              class="w-full border border-gray-300 text-gray-700 hover:bg-gray-50 py-3 rounded-md flex items-center justify-center"
+            >
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                class="w-4 h-4 mr-2"
+                width="24"
+                height="24"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              >
+                <circle cx="12" cy="12" r="10" />
+                <circle cx="12" cy="12" r="4" />
+                <line x1="21.17" x2="12" y1="8" y2="8" />
+                <line x1="3.95" x2="8.54" y1="6.06" y2="14" />
+                <line x1="10.88" x2="15.46" y1="21.94" y2="14" />
+              </svg>
+              Sign up with Google
+            </button>
+
+            <!-- Login Link -->
+            <div class="text-center">
+              <p class="text-sm text-gray-600">
+                Already have an account?
+                <a
+                  href="/login"
+                  class="text-red-600 hover:text-red-700 font-medium"
+                  >Sign in</a
+                >
+              </p>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11.0.19/dist/sweetalert2.all.min.js"></script>
+    <script>
+      document.addEventListener("DOMContentLoaded", function () {
+        const form = document.getElementById("signup-form");
+        const nameInput = document.getElementById("name");
+        const emailInput = document.getElementById("email");
+        const phoneInput = document.getElementById("phone");
+        const passwordInput = document.getElementById("password");
+        const confirmPasswordInput = document.getElementById("confirmPassword");
+        const termsCheckbox = document.getElementById("terms");
+        const submitButton = document.getElementById("submit-button");
+        const googleSignupButton = document.getElementById("google-signup");
+        const togglePasswordButton = document.getElementById("toggle-password");
+        const toggleConfirmPasswordButton = document.getElementById(
+          "toggle-confirm-password"
+        );
+
+        // Toggle password visibility
+        togglePasswordButton.addEventListener("click", function () {
+          const type =
+            passwordInput.getAttribute("type") === "password"
+              ? "text"
+              : "password";
+          passwordInput.setAttribute("type", type);
+          togglePasswordButton.innerHTML =
+            type === "password"
+              ? '<svg xmlns="http://www.w3.org/2000/svg" class="w-4 h-4" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9.88 9.88a3 3 0 1 0 4.24 4.24"/><path d="M10.73 5.08A10.43 10.43 0 0 1 12 5c7 0 10 7 10 7a13.16 13.16 0 0 1-1.67 2.68"/><path d="M6.61 6.61A13.526 13.526 0 0 0 2 12s3 7 10 7a9.74 9.74 0 0 0 5.39-1.61"/><line x1="2" x2="22" y1="2" y2="22"/></svg>'
+              : '<svg xmlns="http://www.w3.org/2000/svg" class="w-4 h-4" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M2 12s3-7 10-7 10 7 10 7-3 7-10 7-10-7-10-7Z"/><circle cx="12" cy="12" r="3"/></svg>';
+        });
+
+        // Toggle confirm password visibility
+        toggleConfirmPasswordButton.addEventListener("click", function () {
+          const type =
+            confirmPasswordInput.getAttribute("type") === "password"
+              ? "text"
+              : "password";
+          confirmPasswordInput.setAttribute("type", type);
+          toggleConfirmPasswordButton.innerHTML =
+            type === "password"
+              ? '<svg xmlns="http://www.w3.org/2000/svg" class="w-4 h-4" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9.88 9.88a3 3 0 1 0 4.24 4.24"/><path d="M10.73 5.08A10.43 10.43 0 0 1 12 5c7 0 10 7 10 7a13.16 13.16 0 0 1-1.67 2.68"/><path d="M6.61 6.61A13.526 13.526 0 0 0 2 12s3 7 10 7a9.74 9.74 0 0 0 5.39-1.61"/><line x1="2" x2="22" y1="2" y2="22"/></svg>'
+              : '<svg xmlns="http://www.w3.org/2000/svg" class="w-4 h-4" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M2 12s3-7 10-7 10 7 10 7-3 7-10 7-10-7-10-7Z"/><circle cx="12" cy="12" r="3"/></svg>';
+        });
+
+        // Form validation
+        function validateForm() {
+          let isValid = true;
+
+          // Reset errors
+          document
+            .querySelectorAll('p[id$="-error"]')
+            .forEach((el) => el.classList.add("hidden"));
+
+          // Name validation
+          if (!nameInput.value.trim()) {
+            document.getElementById("name-error").textContent =
+              "Name is required";
+            document.getElementById("name-error").classList.remove("hidden");
+            isValid = false;
+          } else if (nameInput.value.trim().length < 2) {
+            document.getElementById("name-error").textContent =
+              "Name must be at least 2 characters";
+            document.getElementById("name-error").classList.remove("hidden");
+            isValid = false;
+          }
+
+          // Email validation
+          const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+          if (!emailInput.value) {
+            document.getElementById("email-error").textContent =
+              "Email is required";
+            document.getElementById("email-error").classList.remove("hidden");
+            isValid = false;
+          } else if (!emailRegex.test(emailInput.value)) {
+            document.getElementById("email-error").textContent =
+              "Please enter a valid email address";
+            document.getElementById("email-error").classList.remove("hidden");
+            isValid = false;
+          }
+
+          // Phone validation
+          const phoneRegex = /^[\+]?[1-9][\d]{0,15}$/;
+          if (!phoneInput.value.trim()) {
+            document.getElementById("phone-error").textContent =
+              "Phone number is required";
+            document.getElementById("phone-error").classList.remove("hidden");
+            isValid = false;
+          } else if (
+            !phoneRegex.test(phoneInput.value.replace(/[\s\-$$$$]/g, ""))
+          ) {
+            document.getElementById("phone-error").textContent =
+              "Please enter a valid phone number";
+            document.getElementById("phone-error").classList.remove("hidden");
+            isValid = false;
+          }
+
+          // Password validation
+          if (!passwordInput.value) {
+            document.getElementById("password-error").textContent =
+              "Password is required";
+            document
+              .getElementById("password-error")
+              .classList.remove("hidden");
+            isValid = false;
+          } else if (passwordInput.value.length < 8) {
+            document.getElementById("password-error").textContent =
+              "Password must be at least 8 characters";
+            document
+              .getElementById("password-error")
+              .classList.remove("hidden");
+            isValid = false;
+          } else if (
+            !/(?=.*[a-z])(?=.*[A-Z])(?=.*\d)/.test(passwordInput.value)
+          ) {
+            document.getElementById("password-error").textContent =
+              "Password must contain uppercase, lowercase, and number";
+            document
+              .getElementById("password-error")
+              .classList.remove("hidden");
+            isValid = false;
+          }
+
+          // Confirm password validation
+          if (!confirmPasswordInput.value) {
+            document.getElementById("confirmPassword-error").textContent =
+              "Please confirm your password";
+            document
+              .getElementById("confirmPassword-error")
+              .classList.remove("hidden");
+            isValid = false;
+          } else if (passwordInput.value !== confirmPasswordInput.value) {
+            document.getElementById("confirmPassword-error").textContent =
+              "Passwords do not match";
+            document
+              .getElementById("confirmPassword-error")
+              .classList.remove("hidden");
+            isValid = false;
+          }
+
+          // Terms validation
+          if (!termsCheckbox.checked) {
+            document.getElementById("terms-error").textContent =
+              "You must agree to the terms and privacy policy";
+            document.getElementById("terms-error").classList.remove("hidden");
+            isValid = false;
+          }
+
+          return isValid;
+        }
+
+        // Form submission
+        form.addEventListener("submit", async function (e) {
+          e.preventDefault();
+
+          if (!validateForm()) return;
+
+          // Show loading state
+          submitButton.textContent = "Creating Account...";
+          submitButton.disabled = true;
+
+          try {
+            // Simulate API call
+            await new Promise((resolve) => setTimeout(resolve, 2000));
+
+            await Swal.fire({
+              title: "Account Created!",
+              text: "Please check your email to verify your account.",
+              icon: "success",
+              confirmButtonText: "Continue",
+              confirmButtonColor: "#dc2626",
+            });
+
+            // Redirect to verify OTP page
+            window.location.href = "/verify-otp";
+          } catch (error) {
+            await Swal.fire({
+              title: "Error",
+              text: "Failed to create account. Please try again.",
+              icon: "error",
+              confirmButtonText: "Try Again",
+              confirmButtonColor: "#dc2626",
+            });
+          } finally {
+            submitButton.textContent = "Create Account";
+            submitButton.disabled = false;
+          }
+        });
+
+        // Google signup
+        googleSignupButton.addEventListener("click", async function () {
+          googleSignupButton.disabled = true;
+          submitButton.disabled = true;
+
+          try {
+            // Simulate Google OAuth
+            await new Promise((resolve) => setTimeout(resolve, 1500));
+
+            await Swal.fire({
+              title: "Success!",
+              text: "Account created with Google successfully.",
+              icon: "success",
+              confirmButtonText: "Continue",
+              confirmButtonColor: "#dc2626",
+            });
+          } catch (error) {
+            await Swal.fire({
+              title: "Error",
+              text: "Google signup failed. Please try again.",
+              icon: "error",
+              confirmButtonText: "Try Again",
+              confirmButtonColor: "#dc2626",
+            });
+          } finally {
+            googleSignupButton.disabled = false;
+            submitButton.disabled = false;
+          }
+        });
+
+        // Clear errors on input
+        const inputs = [
+          nameInput,
+          emailInput,
+          phoneInput,
+          passwordInput,
+          confirmPasswordInput,
+        ];
+        inputs.forEach((input) => {
+          input.addEventListener("input", function () {
+            const errorId = input.id + "-error";
+            document.getElementById(errorId).classList.add("hidden");
+          });
+        });
+
+        termsCheckbox.addEventListener("change", function () {
+          document.getElementById("terms-error").classList.add("hidden");
+        });
+      });
+    </script>
+  </body>
+</html>
